@@ -69,6 +69,17 @@
         ]
     ];
 
+    $pagelle=[
+        [
+            'name' =>'Ros',
+            'voting' => [10,7,9,8,10,9],
+        ],
+        [
+            'name' => 'Fabio',
+            'voting' => [2,2,3,1,4,6,3]
+        ]
+    ];
+
     ?>
 
 <!DOCTYPE html>
@@ -155,5 +166,22 @@
             }
         ?>
     </div>
+
+    <h1>Voti</h1>
+
+    <?php
+        for($k=0;$k<count($pagelle);$k++){
+            $total=0;
+            $votesarr=$pagelle[$k][voting];
+            for($k1=0;$k1<count($votesarr);$k1++){
+                $vote=$votesarr[$k1];
+                $total+=$vote;
+            }
+            $votesnum=count($votesarr);
+            $nome=$pagelle[$k][name];
+            $media = floor($total / $votesnum);
+            echo "nome : ".$nome." media : ".$media."<br>";
+        }
+    ?>
 </body>
 </html>
