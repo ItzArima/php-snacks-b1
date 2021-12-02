@@ -7,7 +7,44 @@
     $mail=$_GET["mail"];
     $age=$_GET["age"];
     
-
+    $posts = [
+        '10/01/2019' => [
+            [
+                'title' => 'Post 1',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 1'
+            ],
+            [
+                'title' => 'Post 2',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 2'
+            ],
+        ],
+        '10/02/2019' => [
+            [
+                'title' => 'Post 3',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 3'
+            ]
+        ],
+        '15/05/2019' => [
+            [
+                'title' => 'Post 4',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 4'
+            ],
+            [
+                'title' => 'Post 5',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 5'
+            ],
+            [
+                'title' => 'Post 6',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 6'
+            ]
+        ],
+    ];
 
     ?>
 
@@ -31,6 +68,22 @@
         echo "accesso riuscito";
         else
         echo "accesso non riuscito"
-    ?>    
+    ?>   
+    <h1>Posts</h1>
+    
+    <?php
+        $arrkeys=array_keys($posts);
+        for($i2=0;$i2<count($posts);$i2++){ 
+            echo $arrkeys[$i2]. "<br>";
+            $selection=$arrkeys[$i2];
+            $selectedarray=$posts[$selection];
+            for($i3=0;$i3<count($selectedarray);$i3++){
+                $elprint=$selectedarray[$i3];
+                echo "title : ".$elprint['title']. "<br>";
+                echo "author : ".$elprint['author']. "<br>";
+                echo "text : ".$elprint['text']. "<br> <br>";
+            }
+        }    
+    ?>
 </body>
 </html>
