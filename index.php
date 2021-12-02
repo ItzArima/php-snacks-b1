@@ -16,7 +16,7 @@
 <body>
     <h1>partite</h1>
     <?php for($i=0;$i < count($partite);$i++) 
-        echo "partita 1:" .$partite[$i][0]. "<br>";
+        echo "partita" .$i. ":" .$partite[$i][0]. " - " .$partite[$i][1]. " | " .$partite[$i][2]. " : " .$partite[$i][3]."<br>";
         
     ?>
 </body>
