@@ -2,7 +2,13 @@
     $partite =array(
         array("milan","fiorentina",11,24),
         array("juve","roma",12,17),
-    )
+    );
+    $name=$_GET["name"];
+    $mail=$_GET["mail"];
+    $age=$_GET["age"];
+    
+
+
     ?>
 
 <!DOCTYPE html>
@@ -19,5 +25,11 @@
         echo "partita" .$i. ":" .$partite[$i][0]. " - " .$partite[$i][1]. " | " .$partite[$i][2]. " : " .$partite[$i][3]."<br>";
         
     ?>
+    <h1>Get</h1>
+    <?php 
+        echo $name."<br>";
+        echo $age."<br>";
+        echo $mail."<br>";
+    ?>    
 </body>
 </html>
