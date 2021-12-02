@@ -46,6 +46,29 @@
         ],
     ];
 
+    $db = [
+        'teachers' => [
+            [
+                'name' => 'Michele',
+                'lastname' => 'Papagni'
+            ],
+            [
+                'name' => 'Fabio',
+                'lastname' => 'Forghieri'
+            ]
+        ],
+        'pm' => [
+            [
+                'name' => 'Roberto',
+                'lastname' => 'Marazzini'
+            ],
+            [
+                'name' => 'Federico',
+                'lastname' => 'Pellegrini'
+            ]
+        ]
+    ];
+
     ?>
 
 <!DOCTYPE html>
@@ -111,5 +134,26 @@
         $paragrafi=explode(".",$paragrafo);
         print_r($paragrafi);
     ?>
+
+    <h1>Stampiamo</h1>
+    
+    <div class="green" style="background-color: lightgreen">
+        <?php
+            $pm=$db['pm'];
+            for($j2=0;$j2<count($pm);$j2++){
+                print_r($pm[$j2][name] ."\n");
+                print_r($pm[$j2][lastname] ."<br>");
+            }
+        ?>
+    </div>
+    <div class="grey" style="background-color: lightgrey">
+        <?php
+            $tc=$db['teachers'];
+            for($j2=0;$j2<count($tc);$j2++){
+                print_r($tc[$j2][name] ."\n");
+                print_r($tc[$j2][lastname] ."<br>");
+            }
+        ?>
+    </div>
 </body>
 </html>
