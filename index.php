@@ -27,9 +27,10 @@
     ?>
     <h1>Get</h1>
     <?php 
-        echo $name."<br>";
-        echo $age."<br>";
-        echo $mail."<br>";
+        if((strlen($name) > 3)&&(strpos($mail,'@'))&&(strpos($mail,'.'))&&(is_numeric($age)))
+        echo "accesso riuscito";
+        else
+        echo "accesso non riuscito"
     ?>    
 </body>
 </html>
