@@ -103,5 +103,13 @@
         }
         print_r($numbers);
     ?>
+
+    <h1>Paragrafi</h1>
+
+    <?php
+        $paragrafo="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti placeat, atque aperiam ab culpa adipisci quos natus porro libero, nam architecto vel sed laboriosam? Explicabo ut officia delectus dicta expedita ex esse. Tenetur tempore dolore, quos aut sunt illum repellendus dolor? In ratione cum expedita fugiat quia veniam nisi ut reprehenderit amet vero ipsum, exercitationem adipisci? Aspernatur enim vero obcaecati omnis exercitationem temporibus, voluptas vitae. Soluta voluptatibus, quod placeat neque magni voluptatum dolor cum eum iure totam assumenda harum perferendis tempora laudantium omnis quam error ut nemo eligendi illum. Ipsum minima nemo excepturi iusto a dolores necessitatibus sint ab molestiae!";
+        $paragrafi=explode(".",$paragrafo);
+        print_r($paragrafi);
+    ?>
 </body>
 </html>
