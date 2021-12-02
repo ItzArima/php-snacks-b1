@@ -85,5 +85,23 @@
             }
         }    
     ?>
+
+    <h1>Random</h1>
+
+    <?php
+        $numbers = [];
+        $number = rand(0,100);
+        array_push($numbers,$number);
+        for($j=0;$j<14;$j++){
+            $number = rand(0,100);
+            if(in_array($number,$numbers)){
+                $j--;
+            }
+            else{
+                array_push($numbers,$number);
+            }
+        }
+        print_r($numbers);
+    ?>
 </body>
 </html>
