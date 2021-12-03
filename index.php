@@ -80,6 +80,35 @@
         ]
     ];
 
+    $ads = [
+        [
+            'image_path' => 'https://conversionsciences.com/wp-content/uploads/2019/04/example-of-emotional-logical-appeal-on-persuasive-copy.jpg',
+            'link' => 'https://www.google.com',
+            'is_active' => true,
+        ],
+        [
+            'image_path' => 'https://previews.123rf.com/images/hstrongart/hstrongart1612/hstrongart161200121/68060446-anuncios-de-cepillos-de-dientes-el%C3%A9ctricos-modo-diferente-de-este-producto-con-blanco-modelo-de-diente.jpg',
+            'link' => 'https://www.facebook.com',
+            'is_active' => true,
+        ],
+        [
+            'image_path' => 'https://thumbs.dreamstime.com/z/back-to-school-sale-background-chalkboard-sale-percentages-marketing-poster-color-pencils-96751666.jpg',
+            'link' => 'https://codepen.io',
+            'is_active' => false,
+        ],
+        [
+            'image_path' => 'https://foodsecurityfoodjustice.files.wordpress.com/2016/11/beyond-the-omlette-1.jpg',
+            'link' => 'https://laravel.com',
+            'is_active' => false,
+        ],
+        [
+            'image_path' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRniLfGdFLxVOUoEwYC9WeRIrfZInB74_80IV8yMnANx3HTZYoQ',
+            'link' => 'https://www.php.net',
+            'is_active' => true,
+        ],
+    
+    ];
+
     ?>
 
 <!DOCTYPE html>
@@ -113,9 +142,9 @@
             $selectedarray=$posts[$selection];
             for($i3=0;$i3<count($selectedarray);$i3++){
                 $elprint=$selectedarray[$i3];
-                echo "title : ".$elprint['title']. "<br>";
-                echo "author : ".$elprint['author']. "<br>";
-                echo "text : ".$elprint['text']. "<br> <br>";
+                echo "title : ".$elprint[title]. "<br>";
+                echo "author : ".$elprint[author ]. "<br>";
+                echo "text : ".$elprint[text]. "<br> <br>";
             }
         }    
     ?>
@@ -183,5 +212,23 @@
             echo "nome : ".$nome." media : ".$media."<br>";
         }
     ?>
+
+    <h1>Ads</h1>
+
+    <?php 
+        $usable= [];
+        foreach($ads as $ad){
+            foreach($ad as $key => $value){
+                if($key == 'is_active' && $value == true) {
+                    array_push($usable , $ad);
+                }
+            }
+        }  
+    ?>
+
+<a href="<?php echo $usable[0][link] ?>"><img src="<?php echo $usable[0][image_path]?>" alt=""></a>
+<a href="<?php echo $usable[1][link] ?>"><img src="<?php echo $usable[1][image_path]?>" alt=""></a>
+<a href="<?php echo $usable[2][link] ?>"><img src="<?php echo $usable[2][image_path]?>" alt=""></a>
+
 </body>
 </html>
