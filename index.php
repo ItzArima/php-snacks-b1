@@ -223,12 +223,14 @@
                     array_push($usable , $ad);
                 }
             }
-        }  
+        } 
+        foreach($usable as $key => $value){
+            ?>
+            <a href="<?php echo $value['link'] ?>"><img src="<?php echo $value['image_path']?>" alt="" height="300px" width="300px"></a>
+            <?php
+        } 
     ?>
 
-<a href="<?php echo $usable[0][link] ?>"><img src="<?php echo $usable[0][image_path]?>" alt=""></a>
-<a href="<?php echo $usable[1][link] ?>"><img src="<?php echo $usable[1][image_path]?>" alt=""></a>
-<a href="<?php echo $usable[2][link] ?>"><img src="<?php echo $usable[2][image_path]?>" alt=""></a>
 
 </body>
 </html>
