@@ -224,11 +224,10 @@
                 }
             }
         } 
-        foreach($usable as $key => $value){
-            ?>
-            <a href="<?php echo $value['link'] ?>"><img src="<?php echo $value['image_path']?>" alt="" height="300px" width="300px"></a>
-            <?php
-        } 
+        $randomDisplay=rand(0,count($usable));
+        ?>
+        <a href="<?php echo $usable[$randomDisplay]['link'] ?>"><img src="<?php echo $usable[$randomDisplay]['image_path']?>" alt="" height="300px" width="300px"></a>
+        <?php
     ?>
 
 
