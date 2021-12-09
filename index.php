@@ -1,4 +1,6 @@
 <?php
+// data and array section
+
     $partite =array(
         array("milan","fiorentina",11,24),
         array("juve","roma",12,17),
@@ -120,19 +122,25 @@
     <title>Document</title>
 </head>
 <body>
+    
+<!-- snack 1 blocco 1 -->
     <h1>partite</h1>
     <?php for($i=0;$i < count($partite);$i++) 
         echo "partita" .$i. ":" .$partite[$i][0]. " - " .$partite[$i][1]. " | " .$partite[$i][2]. " : " .$partite[$i][3]."<br>";
         
     ?>
-    <h1>Get</h1>
+
+<!-- snack 2 blocco 1 -->
+<h1>Get</h1>
     <?php 
         if((strlen($name) > 3)&&(strpos($mail,'@'))&&(strpos($mail,'.'))&&(is_numeric($age)))
         echo "accesso riuscito";
         else
         echo "accesso non riuscito"
     ?>   
-    <h1>Posts</h1>
+
+<!-- snack 3 blocco 1 -->
+<h1>Posts</h1>
     
     <?php
         $arrkeys=array_keys($posts);
@@ -149,7 +157,9 @@
         }    
     ?>
 
-    <h1>Random</h1>
+
+<!-- snack 4 blocco 1 -->
+<h1>Random</h1>
 
     <?php
         $numbers = [];
@@ -167,7 +177,8 @@
         print_r($numbers);
     ?>
 
-    <h1>Paragrafi</h1>
+<!-- snack 5 blocco 1 -->
+<h1>Paragrafi</h1>
 
     <?php
         $paragrafo="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti placeat, atque aperiam ab culpa adipisci quos natus porro libero, nam architecto vel sed laboriosam? Explicabo ut officia delectus dicta expedita ex esse. Tenetur tempore dolore, quos aut sunt illum repellendus dolor? In ratione cum expedita fugiat quia veniam nisi ut reprehenderit amet vero ipsum, exercitationem adipisci? Aspernatur enim vero obcaecati omnis exercitationem temporibus, voluptas vitae. Soluta voluptatibus, quod placeat neque magni voluptatum dolor cum eum iure totam assumenda harum perferendis tempora laudantium omnis quam error ut nemo eligendi illum. Ipsum minima nemo excepturi iusto a dolores necessitatibus sint ab molestiae!";
@@ -175,7 +186,9 @@
         print_r($paragrafi);
     ?>
 
-    <h1>Stampiamo</h1>
+
+<!-- snack 6 blocco 1 -->
+<h1>Stampiamo</h1>
     
     <div class="green" style="background-color: lightgreen">
         <?php
@@ -196,7 +209,8 @@
         ?>
     </div>
 
-    <h1>Voti</h1>
+<!-- snack 7 blocco 1 -->    
+<h1>Voti</h1>
 
     <?php
         for($k=0;$k<count($pagelle);$k++){
@@ -213,7 +227,8 @@
         }
     ?>
 
-    <h1>Ads</h1>
+<!-- snack 1 blocco 2 -->
+<h1>Ads</h1>
 
     <?php 
         $usable= [];
